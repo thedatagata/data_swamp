@@ -1,0 +1,7 @@
+./filter_swamp/.dlt/secrets.toml
+./fill_swamp/.dlt/secrets.toml
+./filter_swamp/data_swamp_models/data_swamp.duckdb
+./filter_swamp/data_swamp_models/target/
+./filter_swamp/data_swamp_models/dbt_packages/
+./filter_swamp/data_swamp_models/logs/
+./filter_swamp/data_swamp_models/packages-lock.yml

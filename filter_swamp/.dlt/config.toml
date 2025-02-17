@@ -1,0 +1,20 @@
+[sources.filesystem]
+bucket_url = "s3://duck-lake/data-swamp/monthly/analytics/"
+file_glob = "ga_sessions_*/*.parquet"
+
+[extract.data_writer]
+file_max_bytes = 10000000  # Reduced to 10MB
+file_max_items = 25000     # Reduced to 25k
+
+[normalize]
+workers = 2                # Reduced to 2 workers
+start_method = "spawn" 
+
+[normalize.data_writer]
+file_max_bytes = 5000000 
+file_max_items = 10000    
+buffer_max_items = 5000   
+
+# Load stage settings
+[load]
+workers = 8                
